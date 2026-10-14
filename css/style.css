@@ -993,8 +993,8 @@ nav a:hover::after{ width:100%; }
     position: relative;
     padding: 70px 6vw 96px;
     background:
-        radial-gradient(circle at top, rgba(34, 211, 238, 0.12), transparent 28%),
-        linear-gradient(180deg, #07111d 0%, #02070d 100%);
+        linear-gradient(rgba(3, 10, 20, .76), rgba(2, 7, 13, .86)),
+        radial-gradient(circle at 50% 0%, rgba(34, 211, 238, .12), transparent 38%);
 }
 
 .portfolio-shell {

@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const revealItems =
         document.querySelectorAll(
-            ".project-card, .section-heading, .portfolio-cta"
+            ".project-card, .section-heading, .pricing-card, .pricing-intro, .portfolio-cta"
         );
 
 

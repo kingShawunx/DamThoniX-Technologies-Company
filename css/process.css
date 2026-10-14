@@ -20,6 +20,11 @@ body {
     overflow-x: hidden;
 }
 
+body.process-page {
+    background-color: #020812;
+    color: #ffffff;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -165,9 +170,9 @@ a {
 }
 
 .desktop-nav a {
-    color: #475569;
+    color: #a7b7ca;
 
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
 
     transition: color .3s ease;
@@ -277,9 +282,9 @@ a {
 
     margin-top: 30px;
 
-    color: #526174;
+    color: #c0ccda;
 
-    font-size: 16px;
+    font-size: 18px;
 
     line-height: 1.8;
 }
@@ -342,7 +347,7 @@ a {
     background:
         rgba(255,255,255,.035);
 
-    color: #475569;
+    color: #d0d9e5;
 }
 
 .secondary-button:hover {
@@ -579,7 +584,7 @@ a {
 .section-tag {
     color: #38a9ff;
 
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
 
     letter-spacing: 3px;
@@ -606,11 +611,11 @@ a {
 }
 
 .intro-description {
-    color: #526174;
+    color: #c0ccda;
 
     line-height: 1.8;
 
-    font-size: 14px;
+    font-size: 17px;
 }
 
 
@@ -721,7 +726,7 @@ a {
 .step-meta {
     color: #38a9ff;
 
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 800;
 
     letter-spacing: 3px;
@@ -740,9 +745,9 @@ a {
 
     margin-top: 15px;
 
-    color: #526174;
+    color: #c0ccda;
 
-    font-size: 14px;
+    font-size: 17px;
 
     line-height: 1.8;
 }
@@ -759,19 +764,19 @@ a {
 }
 
 .step-content li {
-    padding: 7px 10px;
+    padding: 8px 12px;
 
     border:
-        1px solid rgba(255,255,255,.08);
+        1px solid rgba(56,169,255,.2);
 
     border-radius: 20px;
 
-    color: #475569;
+    color: #d0d9e5;
 
     background:
-        #f1f5f9;
+        rgba(38,156,255,.08);
 
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .step-image {
@@ -779,17 +784,25 @@ a {
 
     width: 100%;
 
+    height: 310px;
     min-height: 310px;
-
-    padding: 10px;
 
     border:
         1px solid rgba(255,255,255,.08);
 
     border-radius: 22px;
 
+    overflow: hidden;
     background:
-        rgba(255,255,255,.025);
+        #071321;
+}
+
+.step-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
 .image-placeholder {
@@ -832,9 +845,9 @@ a {
 .image-placeholder small {
     margin-top: 10px;
 
-    color: #64758b;
+    color: #a7b7ca;
 
-    font-size: 10px;
+    font-size: 13px;
 }
 
 
@@ -856,9 +869,10 @@ a {
 
     margin-top: 22px;
 
-    color: #526174;
+    color: #c0ccda;
 
     line-height: 1.8;
+    font-size: 17px;
 }
 
 .workflow-grid {
@@ -904,7 +918,7 @@ a {
 .workflow-card strong {
     color: #269cff;
 
-    font-size: 11px;
+    font-size: 13px;
 
     letter-spacing: 2px;
 }
@@ -912,15 +926,15 @@ a {
 .workflow-card h3 {
     margin-top: 45px;
 
-    font-size: 21px;
+    font-size: 23px;
 }
 
 .workflow-card p {
     margin-top: 12px;
 
-    color: #526174;
+    color: #c0ccda;
 
-    font-size: 14px;
+    font-size: 16px;
 
     line-height: 1.7;
 }
@@ -942,34 +956,33 @@ a {
 .showcase-grid {
     display: grid;
 
-    grid-template-columns:
-        1.4fr
-        .8fr
-        .8fr;
-
-    grid-template-rows:
-        400px;
-
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 15px;
 }
 
 .showcase-image {
-    min-height: 400px;
-
-    padding: 10px;
+    position: relative;
+    min-width: 0;
+    aspect-ratio: 2.2;
 
     border:
         1px solid rgba(255,255,255,.08);
 
     border-radius: 22px;
 
+    overflow: hidden;
     background:
         rgba(255,255,255,.025);
 }
 
-.showcase-image .image-placeholder {
+.showcase-image img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
     height: 100%;
-    min-height: 0;
+    object-fit: contain;
+    object-position: center;
 }
 
 
@@ -1042,9 +1055,10 @@ a {
 
     margin: 25px auto 0;
 
-    color: #526174;
+    color: #c0ccda;
 
     line-height: 1.8;
+    font-size: 17px;
 }
 
 .cta-buttons {
@@ -1068,9 +1082,9 @@ footer {
     border-top:
         1px solid rgba(255,255,255,.06);
 
-    color: #607286;
+    color: #a7b7ca;
 
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .footer-brand {
@@ -1141,9 +1155,9 @@ footer {
 
         border-radius: 10px;
 
-        color: #9aabbe;
+        color: #c0ccda;
 
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .mobile-navigation a:hover {
@@ -1169,15 +1183,7 @@ footer {
     }
 
     .showcase-grid {
-        grid-template-columns:
-            1fr 1fr;
-
-        grid-template-rows:
-            350px 350px;
-    }
-
-    .showcase-image.large {
-        grid-column: 1 / -1;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
 }
@@ -1262,7 +1268,7 @@ footer {
     }
 
     .hero-copy > p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .hero-visual {
@@ -1347,7 +1353,23 @@ footer {
         font-size: 32px;
     }
 
+    .step-content > p {
+        font-size: 16px;
+    }
+
+    .step-content li {
+        font-size: 12px;
+    }
+
+    .workflow-card p,
+    .workflow-copy > p,
+    .intro-description,
+    .cta-content > p {
+        font-size: 16px;
+    }
+
     .step-image {
+        height: 250px;
         min-height: 250px;
     }
 
@@ -1361,16 +1383,10 @@ footer {
 
     .showcase-grid {
         grid-template-columns: 1fr;
-
-        grid-template-rows:
-            repeat(3, 300px);
     }
 
-    .showcase-image,
-    .showcase-image.large {
-        min-height: 300px;
-
-        grid-column: auto;
+    .showcase-image {
+        aspect-ratio: 2.2;
     }
 
     .process-cta {

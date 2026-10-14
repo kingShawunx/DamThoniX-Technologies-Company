@@ -14,10 +14,20 @@ html {
 }
 
 body {
-    background: #020812;
+    background: #071321;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.about-page {
+    background:
+        radial-gradient(ellipse at 78% 5%, rgba(25, 101, 184, .18), transparent 38%),
+        linear-gradient(140deg, #071321, #091a2b 52%, #07111f);
+    color: #f4f8fc;
 }
 
 a {
@@ -166,9 +176,9 @@ button {
 }
 
 .main-nav a {
-    color: #475569;
+    color: #b8c7d8;
 
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
 
     transition:
@@ -191,10 +201,10 @@ button {
     width: 42px;
     height: 42px;
 
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(196,214,235,.18);
     border-radius: 10px;
 
-    background: rgba(255,255,255,.04);
+    background: rgba(255,255,255,.06);
 
     cursor: pointer;
 }
@@ -207,7 +217,7 @@ button {
 
     margin: 4px auto;
 
-    background: #334155;
+    background: #d2deeb;
 }
 
 .mobile-menu {
@@ -295,9 +305,9 @@ button {
 
     margin-top: 28px;
 
-    color: #526174;
+    color: #b7c5d5;
 
-    font-size: 17px;
+    font-size: 18px;
 
     line-height: 1.8;
 }
@@ -329,7 +339,7 @@ button {
 
     border-radius: 30px;
 
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
 
     transition:
@@ -362,7 +372,7 @@ button {
 
     background: rgba(255,255,255,.035);
 
-    color: #475569;
+    color: #d2deeb;
 }
 
 .secondary-button:hover {
@@ -441,7 +451,7 @@ button {
             circle at 35% 25%,
             #269cff,
             #0a3260 48%,
-            #020812 75%
+            #071321 75%
         );
 
     border: 1px solid rgba(90,190,255,.65);
@@ -587,19 +597,19 @@ button {
 .company-text p {
     margin-top: 22px;
 
-    color: #526174;
+    color: #b7c5d5;
 
     line-height: 1.85;
 
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .company-text .large-text {
     margin-top: 0;
 
-    color: #334155;
+    color: #edf4fb;
 
-    font-size: 25px;
+    font-size: 27px;
 
     line-height: 1.55;
 }
@@ -755,8 +765,9 @@ button {
 
     margin-top: 20px;
 
-    color: #526174;
+    color: #b7c5d5;
 
+    font-size: 16px;
     line-height: 1.8;
 }
 
@@ -838,9 +849,9 @@ button {
 .value-card p {
     margin-top: 12px;
 
-    color: #526174;
+    color: #b7c5d5;
 
-    font-size: 14px;
+    font-size: 15.5px;
 
     line-height: 1.7;
 }
@@ -863,8 +874,9 @@ button {
 
     margin-top: 22px;
 
-    color: #526174;
+    color: #b7c5d5;
 
+    font-size: 16px;
     line-height: 1.8;
 }
 
@@ -926,9 +938,9 @@ button {
 .capability-item p {
     margin-top: 6px;
 
-    color: #526174;
+    color: #b7c5d5;
 
-    font-size: 14px;
+    font-size: 15.5px;
 }
 
 .capability-arrow {
@@ -1006,8 +1018,9 @@ button {
 
     margin: 25px auto;
 
-    color: #526174;
+    color: #b7c5d5;
 
+    font-size: 16px;
     line-height: 1.8;
 }
 
@@ -1027,7 +1040,7 @@ button {
     background: #087df5;
     color: #ffffff;
 
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
 
     box-shadow:
@@ -1065,9 +1078,9 @@ footer {
     border-top:
         1px solid rgba(255,255,255,.06);
 
-    color: #64758b;
+    color: #a6b6c9;
 
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .footer-brand {
@@ -1076,7 +1089,7 @@ footer {
 
     gap: 10px;
 
-    color: #1f2937;
+    color: #edf4fb;
 }
 
 .footer-brand .logo-mark {
@@ -1096,7 +1109,7 @@ footer {
 .footer-brand span {
     margin-top: 2px;
 
-    color: #64758b;
+    color: #9aadc2;
 
     font-size: 7px;
 
@@ -1216,7 +1229,7 @@ footer {
     }
 
     .hero-content > p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .about-orbit {
@@ -1256,7 +1269,7 @@ footer {
     }
 
     .company-text .large-text {
-        font-size: 21px;
+        font-size: 22px;
     }
 
     .company-stats {
@@ -1294,7 +1307,7 @@ footer {
     }
 
     .capability-item p {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .about-cta {

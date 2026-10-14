@@ -11,19 +11,19 @@
 ========================================================= */
 
 :root {
-    --bg: var(--color-white);
-    --bg-soft: var(--color-light-blue);
+    --bg: #071321;
+    --bg-soft: #0c1b2d;
 
     --panel: rgba(255, 255, 255, .035);
-    --panel-strong: rgba(8, 18, 32, .82);
-    --line: rgba(255, 255, 255, .09);
+    --panel-strong: rgba(11, 25, 43, .9);
+    --line: rgba(196, 214, 235, .12);
     --line-strong: rgba(38, 156, 255, .38);
 
-    --ink: var(--color-charcoal);
-    --ink-muted: var(--color-slate);
-    --ink-dim: #475569;
-    --slate: var(--color-slate);
-    --steel: #475569;
+    --ink: #f4f8fc;
+    --ink-muted: #b7c5d5;
+    --ink-dim: #a8b8cb;
+    --slate: #a8b8cb;
+    --steel: #d2deeb;
 
     --blue: var(--color-royal-blue);
     --blue-bright: var(--color-electric-blue);
@@ -43,7 +43,7 @@
     --font-display: "Space Grotesk", "Segoe UI", Arial, sans-serif;
     --font-mono: "Inter", Arial, sans-serif;
 
-    --shadow: 0 24px 60px rgba(0, 0, 0, .45);
+    --shadow: 0 24px 60px rgba(0, 0, 0, .32);
     --shell: 7vw;
 }
 
@@ -68,6 +68,15 @@ body {
     font-family: var(--font-body);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+}
+
+body.contact-page {
+    background:
+        radial-gradient(ellipse at 78% 5%, rgba(25, 101, 184, .18), transparent 38%),
+        linear-gradient(140deg, #071321, #091a2b 52%, #07111f);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 a {
@@ -202,7 +211,7 @@ ul {
 
 .main-nav a {
     color: var(--steel);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     transition: color .3s ease, transform .3s ease;
 }
@@ -220,9 +229,9 @@ ul {
     display: none;
     width: 42px;
     height: 42px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid rgba(196, 214, 235, .2);
     border-radius: 10px;
-    background: #ffffff;
+    background: rgba(255, 255, 255, .06);
     cursor: pointer;
 }
 
@@ -231,7 +240,7 @@ ul {
     width: 20px;
     height: 2px;
     margin: 4px auto;
-    background: #334155;
+    background: #d2deeb;
     transition: transform .3s ease, opacity .3s ease;
 }
 
@@ -306,7 +315,7 @@ ul {
     max-width: 600px;
     margin-top: 26px;
     color: var(--ink-muted);
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.8;
 }
 
@@ -325,7 +334,7 @@ ul {
     gap: 10px;
     padding: 15px 26px;
     border-radius: 30px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
     letter-spacing: .02em;
     transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
@@ -344,7 +353,7 @@ ul {
 .secondary-button {
     border: 1px solid rgba(255, 255, 255, .14);
     background: rgba(255, 255, 255, .035);
-    color: #475569;
+    color: #d2deeb;
 }
 
 .secondary-button:hover {
@@ -428,7 +437,7 @@ a.quick-card:hover {
 .quick-label {
     display: block;
     color: var(--slate);
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.6px;
     text-transform: uppercase;
@@ -437,8 +446,8 @@ a.quick-card:hover {
 .quick-value {
     display: block;
     margin-top: 4px;
-    color: #1f2937;
-    font-size: 13.5px;
+    color: #edf4fb;
+    font-size: 15px;
     font-weight: 600;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -487,7 +496,7 @@ a.quick-card:hover {
     max-width: 600px;
     margin-top: 18px;
     color: var(--ink-muted);
-    font-size: 15.5px;
+    font-size: 16.5px;
     line-height: 1.8;
 }
 
@@ -522,7 +531,7 @@ a.quick-card:hover {
 .panel-sub {
     margin-top: 10px;
     color: var(--ink-dim);
-    font-size: 14.5px;
+    font-size: 15px;
     line-height: 1.7;
 }
 
@@ -546,7 +555,7 @@ a.quick-card:hover {
     display: block;
     margin-bottom: 9px;
     color: var(--steel);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 1.4px;
     text-transform: uppercase;
@@ -565,7 +574,7 @@ a.quick-card:hover {
     border-radius: 12px;
     background: rgba(2, 8, 18, .75);
     color: #ffffff;
-    font-size: 14.5px;
+    font-size: 16px;
     transition: border-color .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
@@ -620,7 +629,7 @@ a.quick-card:hover {
     display: none;
     margin-top: 7px;
     color: #ff8892;
-    font-size: 11.5px;
+    font-size: 13px;
 }
 
 .field.has-error .field-error {
@@ -647,7 +656,7 @@ a.quick-card:hover {
     border-radius: 30px;
     background: linear-gradient(135deg, var(--blue), #6d4cff);
     color: #ffffff;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 800;
     cursor: pointer;
     box-shadow: 0 14px 34px rgba(8, 125, 245, .26);
@@ -668,7 +677,7 @@ a.quick-card:hover {
 .form-note {
     max-width: 330px;
     color: var(--slate);
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.65;
 }
 
@@ -737,9 +746,9 @@ a.quick-card:hover {
 
 .info-block > h3 {
     margin-bottom: 16px;
-    color: #1f2937;
+    color: #edf4fb;
     font-family: var(--font-display);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -777,8 +786,8 @@ a.quick-card:hover {
 
 .info-row-text strong {
     display: block;
-    color: #1f2937;
-    font-size: 13.5px;
+    color: #edf4fb;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -786,7 +795,7 @@ a.quick-card:hover {
     display: block;
     margin-top: 2px;
     color: var(--slate);
-    font-size: 11.5px;
+    font-size: 13px;
     word-break: break-word;
 }
 
@@ -827,7 +836,7 @@ a.quick-card:hover {
     max-width: 520px;
     margin: 14px auto 0;
     color: var(--ink-muted);
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.75;
 }
 
@@ -847,7 +856,7 @@ a.quick-card:hover {
     border: 1px solid var(--line);
     border-radius: 40px;
     background: rgba(255, 255, 255, .035);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     transition: transform .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease;
 }
@@ -955,7 +964,7 @@ a.quick-card:hover {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: #1f2937;
+    color: #edf4fb;
 }
 
 .footer-brand .logo-mark {
@@ -986,13 +995,13 @@ a.quick-card:hover {
 .site-footer > p {
     margin-top: 18px;
     color: var(--ink-muted);
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .site-footer .footer-meta {
     margin-top: 8px;
     color: var(--slate);
-    font-size: 11.5px;
+    font-size: 12.5px;
     letter-spacing: .04em;
 }
 
@@ -1127,7 +1136,7 @@ a.quick-card:hover {
     }
 
     .hero-content > p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .hero-actions .primary-button,
@@ -1195,7 +1204,7 @@ a.quick-card:hover {
     }
 
     .quick-value {
-        font-size: 12.5px;
+        font-size: 14px;
     }
 }
 
