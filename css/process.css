@@ -1272,8 +1272,8 @@ footer {
     }
 
     .hero-visual {
-        width: 300px;
-        height: 300px;
+        width: min(300px, 86vw);
+        height: min(300px, 86vw);
     }
 
     .ring-one {
@@ -1287,8 +1287,8 @@ footer {
     }
 
     .ring-three {
-        width: 300px;
-        height: 190px;
+        width: min(300px, 86vw);
+        height: min(190px, 55vw);
     }
 
     .visual-core {

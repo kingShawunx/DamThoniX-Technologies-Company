@@ -1215,6 +1215,19 @@ nav a:hover::after{ width:100%; }
     .hero { min-height: 900px; }
     .hero-viewport { min-height: 860px; }
 
+    .top-header .logo {
+        min-width: 0;
+        gap: 12px;
+    }
+
+    .top-header {
+        box-sizing: border-box;
+    }
+
+    .top-header .logo h1 {
+        font-size: clamp(14px, 4.5vw, 17px);
+    }
+
     .scene-content { margin-top: 40px; }
 
     .scene-heading {
@@ -1225,7 +1238,13 @@ nav a:hover::after{ width:100%; }
     .scene-description { font-size: 13px; line-height: 1.7; }
 
     .hero-buttons { flex-direction: column; width: 100%; }
-    .primary-btn, .secondary-btn { width: 100%; }
+    .primary-btn,
+    .secondary-btn {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
 
     .globe-stage { width: 380px; height: 380px; top: 640px; }
     .globe-wrapper { width: 200px; height: 200px; }
