@@ -1,0 +1,188 @@
+/* =========================================================
+   DAMTHONIX TECHNOLOGIES
+   BRAND — shared header logo
+   ------------------------------------------------------------
+   Loaded by EVERY page, after that page's own stylesheet.
+   Single source of truth for the company logo so it looks
+   identical site-wide. Do not add page-specific logo rules.
+   ========================================================= */
+
+:root {
+    --color-white: #ffffff;
+    --color-light-blue: #f5f8ff;
+    --color-royal-blue: #2563eb;
+    --color-electric-blue: #3b82f6;
+    --color-deep-navy: #102a56;
+    --color-soft-cyan: #22d3ee;
+    --color-charcoal: #172033;
+    --color-slate: #64748b;
+    --color-border: #dbe4f0;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-white);
+    color: var(--color-charcoal);
+    font-family: var(--font-body, "Inter", sans-serif);
+    line-height: 1.5;
+}
+
+/* =========================================================
+    LOGO TILE
+   The artwork (images/DamzyThecx.png) is a 1080x1080 PNG with
+   an opaque black background, so it is clipped to the tile's
+   rounded corners instead of showing as a hard black square.
+========================================================= */
+
+.logo-mark,
+.brand-icon {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+    line-height: 0;
+
+    background: #000;
+    border: 1px solid rgba(38, 156, 255, .32);
+    box-shadow: 0 0 22px rgba(8, 125, 245, .28);
+}
+
+/* header size — the canonical 43px tile */
+.logo-mark,
+.brand-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+}
+
+/* footer size */
+.footer-brand .logo-mark,
+.footer-brand .brand-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(8, 125, 245, .22);
+}
+
+.logo-mark img,
+.brand-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   HOMEPAGE VARIANT
+   index.html puts the image straight inside .logo
+========================================================= */
+
+.logo img {
+    flex: 0 0 auto;
+    display: block;
+    width: 43px;
+    height: 43px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #000;
+    border: 1px solid rgba(38, 156, 255, .32);
+    box-shadow: 0 0 22px rgba(8, 125, 245, .28);
+}
+
+
+/* =========================================================
+   CLICK TARGET
+   The wordmark already names the company, so the image is
+   decorative here and the link's accessible name comes from
+   the adjacent text.
+========================================================= */
+
+a .logo-mark,
+a .brand-icon,
+a .logo img {
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+a:hover > .logo-mark,
+a:hover > .brand-icon,
+a:hover > .logo img,
+a:focus-visible > .logo-mark,
+a:focus-visible > .brand-icon,
+a:focus-visible > .logo img {
+    transform: translateY(-2px);
+    border-color: rgba(38, 156, 255, .75);
+    box-shadow: 0 0 28px rgba(38, 156, 255, .5);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   The logo must never be squeezed by the navigation or wrap
+   onto a second line beside it.
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .logo-mark,
+    .brand-icon,
+    .logo img {
+        width: 40px;
+        height: 40px;
+        border-radius: 11px;
+    }
+
+    .footer-brand .logo-mark,
+    .footer-brand .brand-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .logo-mark,
+    .brand-icon,
+    .logo img {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+
+    .footer-brand .logo-mark,
+    .footer-brand .brand-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .logo-mark,
+    .brand-icon,
+    .logo img {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .logo-mark,
+    .brand-icon,
+    .logo img,
+    a:hover > .logo-mark,
+    a:hover > .brand-icon,
+    a:hover > .logo img {
+        transition: none;
+    }
+}
