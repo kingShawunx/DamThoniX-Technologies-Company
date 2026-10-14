@@ -1755,6 +1755,7 @@ footer {
         align-items: flex-start;
 
         padding-top: 60px;
+        background-position: center 42%;
     }
 
     .hero-content {
@@ -1791,23 +1792,27 @@ footer {
     }
 
     .portfolio-hero {
-        padding:
-            45px 5vw
-            70px;
+        min-height: 0;
+        padding: 45px 5vw 50px;
+        background-size: cover;
+        background-position: 58% center;
     }
 
     .hero-content h1 {
-        font-size: 47px;
-        letter-spacing: -2px;
+        font-size: clamp(36px, 10vw, 47px);
+        letter-spacing: -1.5px;
+        overflow-wrap: anywhere;
     }
 
     .hero-content p {
         font-size: 15px;
+        line-height: 1.7;
     }
 
     .hero-orbit {
-        width: 280px;
-        height: 280px;
+        width: min(280px, 82vw);
+        height: min(280px, 82vw);
+        margin-top: 36px;
     }
 
     .orbit-one {
@@ -1821,8 +1826,8 @@ footer {
     }
 
     .orbit-three {
-        width: 280px;
-        height: 180px;
+        width: min(280px, 82vw);
+        height: min(180px, 53vw);
     }
 
     .projects-section {
