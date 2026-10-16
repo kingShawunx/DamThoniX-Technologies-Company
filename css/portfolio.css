@@ -1522,6 +1522,69 @@ button {
     color: #d0d9e5;
 }
 
+.portfolio-reviews {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 7vw 90px;
+    padding: clamp(30px, 5vw, 54px);
+    overflow: hidden;
+    border: 1px solid rgba(38, 156, 255, .24);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 88% 50%, rgba(38, 156, 255, .13), transparent 34%),
+        linear-gradient(125deg, rgba(11, 24, 40, .96), rgba(5, 13, 25, .96));
+}
+
+.portfolio-reviews-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.portfolio-reviews h2 {
+    margin: 12px 0;
+    color: #f4f8ff;
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.12;
+}
+
+.portfolio-reviews h2 span {
+    color: #38a9ff;
+}
+
+.portfolio-reviews p {
+    max-width: 600px;
+    margin: 0;
+    color: #a7b7ca;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.portfolio-reviews-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+    padding: 13px 18px;
+    border: 1px solid rgba(56, 169, 255, .55);
+    border-radius: 8px;
+    background: rgba(8, 125, 245, .14);
+    color: #eaf5ff;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.portfolio-reviews-link:hover,
+.portfolio-reviews-link:focus-visible {
+    border-color: #38a9ff;
+    background: rgba(8, 125, 245, .28);
+}
+
 
 /* =========================================================
    CTA
@@ -1782,6 +1845,11 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .portfolio-reviews {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
 }
 
 
@@ -1874,6 +1942,16 @@ footer {
             70px;
     }
 
+    .portfolio-reviews {
+        margin: 0 5vw 70px;
+        padding: 26px 22px;
+    }
+
+    .portfolio-reviews-link {
+        justify-content: center;
+        width: 100%;
+    }
+
     footer {
         padding: 30px 5vw;
 
@@ -1899,7 +1977,10 @@ footer {
     .reveal-item,
     .reveal-item.revealed,
     .project-card,
-    .filter-btn {
+    .filter-btn,
+    .case-preview-card,
+    .case-preview-all,
+    .portfolio-reviews-link {
         opacity: 1;
         transform: none;
         transition: none;

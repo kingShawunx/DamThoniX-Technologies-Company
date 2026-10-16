@@ -250,6 +250,61 @@ main {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.reviews-page {
+    background:
+        radial-gradient(circle at 8% 38%, rgba(34, 211, 238, .08), transparent 26%),
+        linear-gradient(180deg, #f5f8ff 0%, var(--color-white) 48%, #f5f8ff 100%);
+}
+
+.review-discovery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.review-discovery-link {
+    position: relative;
+    display: flex;
+    min-height: 170px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 24px 58px 24px 26px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 0 14px 34px rgba(16, 42, 86, .06);
+    text-decoration: none;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.review-discovery-link:hover,
+.review-discovery-link:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--color-electric-blue);
+    box-shadow: 0 18px 38px rgba(16, 42, 86, .12);
+}
+
+.review-discovery-link strong {
+    color: var(--color-deep-navy);
+    font-family: "Space Grotesk", "Segoe UI", Arial, sans-serif;
+    font-size: 21px;
+}
+
+.review-discovery-link > span:not(.eyebrow):not(.review-discovery-arrow) {
+    color: var(--color-slate);
+    line-height: 1.65;
+}
+
+.review-discovery-arrow {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: var(--color-royal-blue);
+    font-size: 22px;
+}
+
 .review-card {
     display: flex;
     min-height: 190px;
@@ -514,6 +569,10 @@ main {
         grid-template-columns: minmax(0, 1fr);
     }
 
+    .review-discovery {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .cta-box {
         padding: 28px 22px;
     }
@@ -539,10 +598,16 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .review-discovery-link,
     .cta-box .btn,
     .footer-links a,
     .footer-column a {
         transition: none;
+    }
+
+    .review-discovery-link:hover,
+    .review-discovery-link:focus-visible {
+        transform: none;
     }
 }
 
